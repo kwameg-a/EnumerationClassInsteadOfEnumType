@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EnumerationClassInsteadOfEnumType.EmployeeTypes;
+using System;
 
 namespace EnumerationClassInsteadOfEnumType
 {
@@ -6,13 +7,16 @@ namespace EnumerationClassInsteadOfEnumType
     {
         static void Main(string[] args)
         {
-            var seniorManager = EmployeeType.SeniorManager;
-            var manager = EmployeeType.Manager;
-            var assistantManager = EmployeeType.AssistantManager;
+            var seniorManager = EmployeeTypeBase.SeniorManager;
+            var manager = EmployeeTypeBase.Manager;
+            var assistantManager = EmployeeTypeBase.AssistantManager;
+            var contractor = EmployeeTypeBase.Contractor;
+                  
 
             Console.WriteLine($"Hello {seniorManager.DisplayName} has {seniorManager.BonusSize} bonus!");
             Console.WriteLine($"Hello {manager.DisplayName} has {manager.BonusSize} bonus!");
             Console.WriteLine($"Hello {assistantManager.DisplayName} has {assistantManager.BonusSize} bonus!");
+            Console.WriteLine($"Hello {contractor.DisplayName} has {contractor.BonusSize} bonus!");
         }
     }
 }
